@@ -1,26 +1,45 @@
-#include <iostream>
+  #include <iostream>
 
 constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    int *b = new int[NELEMENTS];//hiba1
-    std::cout << '1-100 ertekek duplazasa'//hiba2
-    for (int i = 0;)//hiba3
+    //hiba1
+    int* b = new int[N_ELEMENTS];
+
+    //hiba2
+    std::cout << "1-100 ertekek duplazasa";
+
+    //hiba3
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        b[i] = i * 2;
+        b[i] = (i+1) * 2;
     }
-    for (int i = 0; i; i++)//hiba4
+
+    //hiba4
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        std::cout << "Ertek:"//hiba5
-    }    
+        //hiba5
+        std::cout << "Ertek:" << b[i]<<"\n";
+    }
+
     std::cout << "Atlag szamitasa: " << std::endl;
-    int atlag0;//hiba6
-    for (int i = 0; i < N_ELEMENTS, i++)//hiba7
+
+    //hiba6
+    int atlag=0;
+
+    //hiba7
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        atlag += b[i]//hiba8
+        //hiba8
+        atlag += b[i];
     }
+
     atlag /= N_ELEMENTS;
+
     std::cout << "Atlag: " << atlag << std::endl;
+
     return 0;
 }
+
+ 
